@@ -1,123 +1,267 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTH Hosting & Free Cloud Hub</title>
+    <title>CTH HOSTING // CYBER CLOUD HUB</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap');
+        
         body {
-            font-family: 'Hind Siliguri', sans-serif;
-            background: #0f172a;
-            color: #f8fafc;
+            font-family: 'Fira Code', monospace;
+            background-color: #030712;
+            color: #00ffcc;
+            overflow-x: hidden;
         }
-        .glass {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .matrix-bg {
+            background: radial-gradient(circle at center, #061a14 0%, #030712 100%);
+        }
+
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.7), 0 0 20px rgba(0, 255, 204, 0.4);
+        }
+
+        .neon-border {
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(3, 15, 20, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .neon-border:hover {
+            border-color: #00ffcc;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.5), inset 0 0 15px rgba(0, 255, 204, 0.2);
+            transform: translateY(-4px);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .blinking-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .live-pulse {
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* Custom Scrollbar for Hacker Vibe */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00ffcc55;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ffcc;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-4 md:p-8">
+<body class="matrix-bg min-h-screen flex flex-col justify-between p-4 md:p-8">
 
-    <!-- Header Section -->
-    <header class="max-w-4xl mx-auto text-center my-6">
-        <div class="inline-block px-4 py-1 mb-3 text-xs font-semibold tracking-wider text-cyan-400 uppercase bg-cyan-950/50 rounded-full border border-cyan-800">
-            ⚡ Powered by Shadow Joker
+    <!-- Top Hacker Status Bar -->
+    <header class="max-w-6xl mx-auto w-full text-center my-6">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-emerald-400 uppercase bg-emerald-950/60 rounded-full border border-emerald-500/40 live-pulse">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            [ SYSTEM STATUS: SECURE_CORE_ONLINE // 10 NODES ACTIVE ]
         </div>
-        <h1 class="text-3xl md:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            CTH Cloud & Hosting Hub
+        
+        <h1 class="text-3xl md:text-5xl font-black tracking-wider text-cyan-400 neon-glow uppercase">
+            CTH CLOUD & HOSTING HUB<span class="blinking-cursor">_</span>
         </h1>
-        <p class="text-slate-400 mt-2 text-sm md:text-base">
-            আপনার প্রয়োজনীয় ফ্রি হোস্টিং এবং ফাইল ক্লাউড প্ল্যাটফর্মগুলোর একটি স্মার্ট কালেকশন।
+        
+        <p class="text-slate-400 mt-3 text-xs md:text-sm tracking-wide">
+            &gt; INITIALIZING ELITE CLOUD PROTOCOL... SELECT TARGET HOSTING NODE BELOW.
         </p>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto w-full space-y-8 flex-grow">
-
-        <!-- Links Grid (Cards) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <!-- Card 1 -->
-            <a href="https://drop.netlify.com" target="_blank" class="glass p-5 rounded-2xl hover:border-cyan-500 transition-all duration-300 group flex flex-col justify-between">
+    <!-- Main Grid Content (8-10 Hosting Sites) -->
+    <main class="max-w-6xl mx-auto w-full my-6 flex-grow">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            
+            <!-- 1. Netlify Drop -->
+            <a href="https://drop.netlify.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
                 <div>
-                    <div class="text-3xl mb-2">🚀</div>
-                    <h3 class="font-bold text-lg text-slate-100 group-hover:text-cyan-400 transition">Netlify Drop</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🚀</span>
+                        <span class="text-[10px] bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded border border-cyan-800">INSTANT</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Netlify Drop</h3>
                     <p class="text-xs text-slate-400 mt-1">ফোল্ডার ড্র্যাগ করে মুহূর্তেই লাইভ হোস্টিং লিংক নিন।</p>
                 </div>
-                <span class="mt-4 text-xs font-semibold text-cyan-400 flex items-center gap-1">ভিজিট করুন &rarr;</span>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
             </a>
 
-            <!-- Card 2 -->
-            <a href="https://gofile.io" target="_blank" class="glass p-5 rounded-2xl hover:border-cyan-500 transition-all duration-300 group flex flex-col justify-between">
+            <!-- 2. Gofile Cloud -->
+            <a href="https://gofile.io" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
                 <div>
-                    <div class="text-3xl mb-2">📦</div>
-                    <h3 class="font-bold text-lg text-slate-100 group-hover:text-cyan-400 transition">Gofile Cloud</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">📦</span>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">STORAGE</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Gofile Cloud</h3>
                     <p class="text-xs text-slate-400 mt-1">দ্রুত ফাইল আপলোড ও শেয়ারিংয়ের জন্য সেরা প্ল্যাটফর্ম।</p>
                 </div>
-                <span class="mt-4 text-xs font-semibold text-cyan-400 flex items-center gap-1">ভিজিট করুন &rarr;</span>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
             </a>
 
-            <!-- Card 3 -->
-            <a href="https://surge.sh" target="_blank" class="glass p-5 rounded-2xl hover:border-cyan-500 transition-all duration-300 group flex flex-col justify-between">
+            <!-- 3. Surge Hosting -->
+            <a href="https://surge.sh" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
                 <div>
-                    <div class="text-3xl mb-2">⚡</div>
-                    <h3 class="font-bold text-lg text-slate-100 group-hover:text-cyan-400 transition">Surge Hosting</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">⚡</span>
+                        <span class="text-[10px] bg-purple-950 text-purple-300 px-2 py-0.5 rounded border border-purple-800">CLI / WEB</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Surge Hosting</h3>
                     <p class="text-xs text-slate-400 mt-1">স্ট্যাটিক ওয়েব পাবলিশিং ও ফ্রন্টএন্ড হোস্টিং টুল।</p>
                 </div>
-                <span class="mt-4 text-xs font-semibold text-cyan-400 flex items-center gap-1">ভিজিট করুন &rarr;</span>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
             </a>
+
+            <!-- 4. Vercel -->
+            <a href="https://vercel.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🔺</span>
+                        <span class="text-[10px] bg-blue-950 text-blue-300 px-2 py-0.5 rounded border border-blue-800">PRO CLOUD</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Vercel</h3>
+                    <p class="text-xs text-slate-400 mt-1">নেক্সট জেএস, রিয়াক্ট ও সার্ভারলেস অ্যাপ হোস্টিং।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- 5. Netlify -->
+            <a href="https://www.netlify.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🌐</span>
+                        <span class="text-[10px] bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded border border-cyan-800">WEB APP</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Netlify</h3>
+                    <p class="text-xs text-slate-400 mt-1">ওয়েব ডেভেলপমেন্ট ও গিটহাব অটোমেশন হোস্টিং।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- 6. Render -->
+            <a href="https://render.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🔮</span>
+                        <span class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded border border-indigo-800">FULLSTACK</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Render</h3>
+                    <p class="text-xs text-slate-400 mt-1">পাইথন, ব্যাকএন্ড এবং ফুল-স্ট্যাক অ্যাপ ক্লাউড।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- 7. Cloudflare Pages -->
+            <a href="https://pages.cloudflare.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🛡️</span>
+                        <span class="text-[10px] bg-orange-950 text-orange-300 px-2 py-0.5 rounded border border-orange-800">CDN FAST</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Cloudflare Pages</h3>
+                    <p class="text-xs text-slate-400 mt-1">অত্যন্ত দ্রুত গতির গ্লোবাল সিডিএন হোস্টিং।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- 8. Supabase -->
+            <a href="https://supabase.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🗄️</span>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">DATABASE</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Supabase</h3>
+                    <p class="text-xs text-slate-400 mt-1">ফ্রি ক্লাউড ডাটাবেজ এবং ফাইল স্টোরেজ বাক্যে।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- 9. HTMLPut -->
+            <a href="https://blog.htmlput.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">💻</span>
+                        <span class="text-[10px] bg-rose-950 text-rose-300 px-2 py-0.5 rounded border border-rose-800">HTML HOST</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">HTMLPut</h3>
+                    <p class="text-xs text-slate-400 mt-1">ইনস্ট্যান্ট এইচটিএমএল কোড ও ফাইল হোস্টিং।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- 10. Host-HTML -->
+            <a href="https://host-html.com" target="_blank" class="neon-border p-5 rounded-xl flex flex-col justify-between group">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-3xl">🌐</span>
+                        <span class="text-[10px] bg-amber-950 text-amber-300 px-2 py-0.5 rounded border border-amber-800">PREVIEW</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white group-hover:text-cyan-300 transition">Host-HTML</h3>
+                    <p class="text-xs text-slate-400 mt-1">দ্রুত ওয়েব পেজ লাইভ প্রিভিউ করার প্ল্যাটফর্ম।</p>
+                </div>
+                <div class="mt-5 pt-3 border-t border-cyan-900/50 flex justify-between items-center text-xs text-cyan-400 font-semibold">
+                    <span>ACCESS NODE</span>
+                    <span class="group-hover:translate-x-1 transition">&rarr;</span>
+                </div>
+            </a>
+
         </div>
-
-        <!-- Embedded Live Preview Section (2 Sites inside the page) -->
-        <div class="glass p-6 rounded-2xl">
-            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
-                <span>🌐</span> লাইভ প্রিভিউ সেকশন (পেজের ভেতরে ব্রাউজ করুন)
-            </h2>
-            <p class="text-xs text-slate-400 mb-4">নিচের ট্যাবগুলোতে ক্লিক করে সরাসরি এই পেজের ভেতরেই সাইটগুলো ব্যবহার করতে পারেন:</p>
-
-            <!-- Tab Buttons -->
-            <div class="flex gap-2 mb-4 border-b border-slate-700 pb-3">
-                <button onclick="switchTab('site1')" id="btn1" class="px-4 py-2 text-sm font-semibold rounded-lg bg-cyan-600 text-white transition">Netlify Drop</button>
-                <button onclick="switchTab('site2')" id="btn2" class="px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition">Gofile Cloud</button>
-            </div>
-
-            <!-- Iframe Frames -->
-            <div class="w-full h-[400px] rounded-xl overflow-hidden border border-slate-700 bg-slate-900">
-                <iframe id="iframe1" src="https://drop.netlify.com" class="w-full h-full border-0"></iframe>
-                <iframe id="iframe2" src="https://gofile.io" class="w-full h-full border-0 hidden"></iframe>
-            </div>
-        </div>
-
     </main>
 
-    <!-- Footer -->
-    <footer class="max-w-4xl mx-auto text-center mt-8 text-xs text-slate-500">
-        CTH HOSTING &copy; 2026 — Created by <strong class="text-slate-400">SHADOW JOKER</strong>
+    <!-- Hacker Footer & Credits -->
+    <footer class="max-w-6xl mx-auto w-full text-center mt-10 pt-4 border-t border-cyan-950 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div>CTH HOSTING &copy; 2026 — ALL RIGHTS SECURED</div>
+        <div class="text-cyan-400 font-bold neon-glow">CREATED BY SHADOW JOKER</div>
     </footer>
 
-    <!-- JavaScript for Tab Switching -->
-    <script>
-        function switchTab(site) {
-            const iframe1 = document.getElementById('iframe1');
-            const iframe2 = document.getElementById('iframe2');
-            const btn1 = document.getElementById('btn1');
-            const btn2 = document.getElementById('btn2');
-
-            if (site === 'site1') {
-                iframe1.classList.remove('hidden');
-                iframe2.classList.add('hidden');
-                btn1.className = "px-4 py-2 text-sm font-semibold rounded-lg bg-cyan-600 text-white transition";
-                btn2.className = "px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
-            } else {
-                iframe1.classList.add('hidden');
-                iframe2.classList.remove('hidden');
-                btn2.className = "px-4 py-2 text-sm font-semibold rounded-lg bg-cyan-600 text-white transition";
-                btn1.className = "px-4 py-2 text-sm font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
-            }
-        }
-    </script>
 </body>
 </html>
